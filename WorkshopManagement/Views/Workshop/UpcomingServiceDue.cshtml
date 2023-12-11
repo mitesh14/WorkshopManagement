@@ -1,0 +1,28 @@
+﻿@model List<Vehicle>
+
+<h2>Upcoming Service Due</h2>
+<div>
+    <a asp-action="AllCustomers">Back to List</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Vehicle ID</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Last Service Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var vehicle in Model)
+        {
+            <tr>
+                <td>@vehicle.VehicleID</td>
+                <td>@vehicle.Make</td>
+                <td>@vehicle.Model</td>
+                <td>@vehicle.LastServiceDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

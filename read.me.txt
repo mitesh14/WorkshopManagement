@@ -1,0 +1,21 @@
+
+Workshop management system: in Asp.net Core
+
+      => we have make workshop management system like
+	list of customer available in db it will be show and also show in 
+	vehicle page associate with customer details.
+	when click on bookednappoinment it will be save the slot and save time and slot in db
+	once four slot for day is booked then it will show the sloat booded per day page.
+	also on the customer list page string filter to check find the customer name to 
+	find the customer vehicle details.
+ 
+
+**Run the code and enter below url:
+
+=>https://localhost:44333/Workshop/AllCustomers
+
+
+=> I have first time made the project in asp.net core and during the database migration 
+time i have pahse some problems and it will be resolved. i have tried my best.
+
+=> if i have some suggestions and other options so will do better.

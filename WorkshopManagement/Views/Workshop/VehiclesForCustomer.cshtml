@@ -1,0 +1,29 @@
+﻿@model List<Vehicle>
+
+<h2>Vehicles for Customer @ViewBag.CustomerName</h2>
+<p>Showing vehicles belonging to the customer:</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Vehicle ID</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Last Service Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var vehicle in Model)
+        {
+            <tr>
+                <td>@vehicle.VehicleID</td>
+                <td>@vehicle.Make</td>
+                <td>@vehicle.Model</td>
+                <td>@vehicle.LastServiceDate.ToShortDateString()</td>
+                <td>
+                    @Html.ActionLink("Book Workshop Slot", "BookWorkshopSlot", new { vehicleId = vehicle.VehicleID }, new { @class = "btn btn-success btn-sm" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
